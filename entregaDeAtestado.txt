@@ -1,0 +1,85 @@
+/* BD Atestatado Logico: */
+
+
+
+CREATE TABLE profissional (
+    instituicao VARCHAR (360) NOT null,
+    sexo VARCHAR (360) NOT null,
+    cargo VARCHAR (360) NOT null,
+    perfil_login VARCHAR (360) NOT null,
+    contato VARCHAR (360) NOT null,
+    senha VARCHAR (360) NOT null,
+    login VARCHAR (360) NOT null,
+    email VARCHAR (360) NOT null,
+    rg VARCHAR (360) NOT null,
+    cpf VARCHAR (360) NOT null,
+    endereco VARCHAR (360) NOT null,
+    data_nascimento DATE NOT null,
+    nome_completo VARCHAR (360) NOT null,
+    id_profissional INTEGER NOT null AUTO_INCREMENT PRIMARY KEY
+);
+
+CREATE TABLE atestado (
+    data_solicitacao DATE NOT null,
+    data_entrega DATE NOT null,
+    status VARCHAR (360) NOT null,
+    url_arquivo VARCHAR (360) NOT null,
+    id_atestado INTEGER NOT null AUTO_INCREMENT PRIMARY KEY,
+    fk_profissional_id_profissional INTEGER,
+    fk_aluno_id_aluno INTEGER
+);
+
+CREATE TABLE administradores (
+    instituicao VARCHAR (360) NOT null,
+    sexo VARCHAR (360) NOT null,
+    login VARCHAR (360) NOT null,
+    senha VARCHAR (360) NOT null,
+    contato VARCHAR (360) NOT null,
+    email VARCHAR (360) NOT null,
+    perfil_login VARCHAR (360) NOT null,
+    cargo VARCHAR (360) NOT null,
+    cpf VARCHAR (360) NOT null,
+    rg VARCHAR (360) NOT null,
+    endereco VARCHAR (360) NOT null,
+    data_nascimento DATE NOT null,
+    nome_completo VARCHAR (360) NOT null,
+    id_administradores INTEGER NOT null AUTO_INCREMENT PRIMARY KEY,
+    fk_atestado_id_atestado INTEGER
+);
+
+CREATE TABLE aluno (
+    sexo VARCHAR (360) NOT null,
+    nome_completo VARCHAR (360) NOT null,
+    data_nascimento DATE NOT null,
+    endereco VARCHAR (360) NOT null,
+    nome_responsavel VARCHAR (360) NOT null,
+    cpf VARCHAR (360) NOT null,
+    rg VARCHAR (360) NOT null,
+    grau_parentesco VARCHAR (360) NOT null,
+    data_nasc_responsavel DATE NOT null,
+    contato VARCHAR (360) NOT null,
+    email VARCHAR (360) NOT null,
+    login VARCHAR (360) NOT null,
+    senha VARCHAR (360) NOT null,
+    perfil_login VARCHAR (360) NOT null,
+    instituicao VARCHAR (360) NOT null,
+    modalidade VARCHAR (360) NOT null,
+    turma VARCHAR (360) NOT null,
+    turno VARCHAR (360) NOT null,
+    id_aluno INTEGER NOT null AUTO_INCREMENT PRIMARY KEY
+);
+ 
+ALTER TABLE atestado ADD CONSTRAINT FK_atestado_2
+    FOREIGN KEY (fk_profissional_id_profissional)
+    REFERENCES profissional (id_profissional)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE atestado ADD CONSTRAINT FK_atestado_3
+    FOREIGN KEY (fk_aluno_id_aluno)
+    REFERENCES aluno (id_aluno)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE administradores ADD CONSTRAINT FK_administradores_2
+    FOREIGN KEY (fk_atestado_id_atestado)
+    REFERENCES atestado (id_atestado)
+    ON DELETE RESTRICT;
