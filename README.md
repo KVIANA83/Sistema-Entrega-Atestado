@@ -5,11 +5,12 @@
 **ETAPAS DE DESENVOLVIMENTO**
 
 *-Banco de Dados (MySQL);*
-
 *-Design (protótipo);*
-
 *-Backend (linguagem escolhida);*
-
 *-Frontend (HTML, CSS e JavaScript),*
+
+
+O projeto encontra-se atualmente em fase de implementação, e algumas funcionalidades ainda serão acrescentadas. Até o momento, a finalização concentrou-se no banco de dados, enquanto as demais etapas estão em processo de desenvolvimento.
+
 
 
