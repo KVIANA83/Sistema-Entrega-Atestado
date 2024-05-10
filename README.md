@@ -8,7 +8,7 @@
 
 - *Banco de Dados (MySQL);*
 - *Design (protótipo);*
-- *Backend (linguagem escolhida);*
+- *Backend (linguagem Java com Spring);*
 - *Frontend (HTML, CSS e JavaScript),*
 
 
