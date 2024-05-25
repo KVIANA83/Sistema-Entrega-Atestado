@@ -4,17 +4,17 @@ CREATE DATABASE ATTESTIFY_NOW;
 USE ATTESTIFY_NOW;
 
 CREATE TABLE profissional (
-    instituicao VARCHAR (360) NOT null,
-    sexo VARCHAR (360) NOT null,
-    cargo VARCHAR (360) NOT null,
-    perfil_login VARCHAR (360) NOT null,
-    contato VARCHAR (360) NOT null,
-    senha VARCHAR (360) NOT null,
-    login VARCHAR (360) NOT null,
-    email VARCHAR (360) NOT null,
-    rg VARCHAR (360) NOT null,
-    cpf VARCHAR (360) NOT null,
-    endereco VARCHAR (360) NOT null,
+    instituicao VARCHAR (150) NOT null,
+    sexo VARCHAR (10) NOT null,
+    cargo VARCHAR (40) NOT null,
+    perfil_login VARCHAR (50) NOT null,
+    contato VARCHAR (15) NOT null,
+    senha VARCHAR (50) NOT null,
+    login VARCHAR (150) NOT null,
+    email VARCHAR (150) NOT null,
+    rg VARCHAR (20) NOT null,
+    cpf VARCHAR (14) NOT null,
+    endereco VARCHAR (200) NOT null,
     data_nascimento DATE NOT null,
     nome_completo VARCHAR (360) NOT null,
     id_profissional INTEGER NOT null AUTO_INCREMENT PRIMARY KEY
