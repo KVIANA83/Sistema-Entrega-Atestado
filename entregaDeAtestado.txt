@@ -1,6 +1,7 @@
 /* BD Atestatado Logico: */
 
-
+CREATE DATABASE ATTESTIFY_NOW;
+USE ATTESTIFY_NOW;
 
 CREATE TABLE profissional (
     instituicao VARCHAR (360) NOT null,
