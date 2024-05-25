@@ -18,10 +18,10 @@
 --
 -- Table structure for table `administradores`
 --
-
-DROP TABLE IF EXISTS `administradores`;
+
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
+
 CREATE TABLE `administradores` (
   `instituicao` varchar(360) NOT NULL,
   `sexo` varchar(20) NOT NULL,
@@ -57,7 +57,7 @@ UNLOCK TABLES;
 -- Table structure for table `aluno`
 --
 
-DROP TABLE IF EXISTS `aluno`;
+
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `aluno` (
@@ -97,7 +97,7 @@ UNLOCK TABLES;
 -- Table structure for table `atestado`
 --
 
-DROP TABLE IF EXISTS `atestado`;
+
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `atestado` (
@@ -128,8 +128,7 @@ UNLOCK TABLES;
 --
 -- Table structure for table `profissional`
 --
-
-DROP TABLE IF EXISTS `profissional`;
+
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `profissional` (
